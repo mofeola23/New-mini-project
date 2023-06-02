@@ -225,10 +225,6 @@
     margin-bottom: 12px;
     color: #6941C6;
 }
-.right-title-top{
-    font-size: 18px;
-    margin-bottom: 12px;
-}
 .right-top-content{
     color: #667085;
     margin-bottom: 24px;
@@ -305,6 +301,64 @@
     transition: background-color 0.3s ease;
 }
 
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .left-content {
+      flex: 1 1 100%;
+    }
+
+    .content{
+        display: inline-block;
+        width: 100%;
+        /* flex-direction: row;
+        align-items: stretch; */
+    }
+  
+    .right-content {
+      flex: 1 1 100%;
+      margin: -30px 0px 100px 60px;
+    }
+
+    .img{
+        width: 420px;
+        height: 308px;
+    }
+
+    .img-one{
+        width: 300px;
+    }
+
+    .img-two{
+        width: 300px;
+    }
+
+    .content-one{
+        width: 250px;
+        height: 200px;
+        margin-left: 200px;  
+    }
+
+    .content-two{
+        width: 250px;
+        height: 200px;
+        margin-left: 200px;
+    }
+  }
+  
+  /* Media query for screens smaller than 576px */
+  @media (max-width: 320px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .header,
+    .content,
+    .left-content,
+    .right-content {
+      padding: 5px;
+    }
+  }
+
 .down-title{
     font-size: 24px;
     color: #101828;
@@ -318,8 +372,10 @@
 
 .content-three-parent{
     display: grid;
-    flex-direction: row;
-    align-items: stretch;
+    flex-direction: column;
+    /* align-items: stretch; */
+    padding: px;
+    /* margin-left: -20px; */
 }
 
 .bottom-content{
@@ -642,3 +698,26 @@
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
+
+.grid-container {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 15px; 
+margin-bottom: 70px;
+}
+  
+  
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  /* Media query for screens smaller than 576px */
+  @media (max-width: 576px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 10px;
+    }
+  }
